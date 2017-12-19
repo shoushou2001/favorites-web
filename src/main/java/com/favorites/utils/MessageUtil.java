@@ -10,4 +10,11 @@ public class MessageUtil {
 		return template;
 	}
 
+	public static void main(String a[]) {
+		String template = "Hello {0}, this is {1} who I mentioned in our {2} meeting";
+		String[] key = { "John", "Mike", "3" };
+		String msg = getMessage(template, key);
+		System.out.println(msg);
+
+	}
 }
