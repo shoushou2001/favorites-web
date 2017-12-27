@@ -27,6 +27,10 @@ public interface CollectRepository extends JpaRepository<Collect, Long> {
 			+ "u.userName as userName,u.profilePicture as profilePicture,f.id as favoriteId,f.name as favoriteName "
 			+ "from Collect c,User u,Favorites f WHERE c.userId=u.id and c.favoritesId=f.id and c.isDelete='YES'";
 
+	public String rowsOf = "select count(*) from Collect c";
+	
+	@Query(rowsOf)
+	int getRowsOfCollect();
 
 	//随便看看根据类别查询收藏
 	@Query(baseSql+ " and c.type='public' and c.category=?1 ")

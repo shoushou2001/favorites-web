@@ -29,5 +29,7 @@ public interface CollectService {
 	public void otherCollect(Collect collect);
 	
 	public void like(Long userId,long id);
+	
+	public int getRowsOfCollect();
 
 }

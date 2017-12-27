@@ -15,7 +15,7 @@
                               <div class="circle circle-success circle-lg"></div>
                            </div>
                         </div>
-                        <div class="user-block-info">
+                        <div class="user-block-info"> 
                            <div class="user-block-name" th:text="'欢迎  '+${user.userName}" id="leftUserName">欢迎 欢迎</div>
                            <div class="user-block-role" th:text="${user.introduction == null ? '暂无简介' : user.introduction.length() gt 10 ? user.introduction.substring(0,10)+'...' : user.introduction}" id="leftIntroduction">暂无简介</div>
                         </div>
@@ -88,6 +88,12 @@
                   <a title="导出收藏夹" href="javascript:void(0);" onclick="locationUrl('/export','export')">
                      <em class="icon-logout"></em>
                      <span>导出收藏夹</span>
+                  </a>
+               </li>
+               <li class=" " id="export">
+                  <a title="数据统计" href="javascript:void(0);" onclick="locationUrl('/datastats','datastats')">
+                     <em class="icon-logout"></em>
+                     <span>数据统计</span>
                   </a>
                </li>
             </ul>
